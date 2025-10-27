@@ -1,0 +1,219 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --p:0 40px;
+    --text_black:black;
+    --text_white:white;
+    --text_gray:rgb(224, 224, 224);
+    --text_hover:rgb(59, 59, 59);
+    --btn-hover: #303030;
+}   
+html{
+    scroll-behavior: smooth;
+}                                
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text_white);
+    box-shadow:0 0 1px var(--text_hover);
+    padding:var(--p);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+header .Navbar_left a{
+    text-decoration: none;
+    font-size: 28px;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text_black);
+}
+header .Navbar_menu ul, .Navbar_right{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+header .Navbar_menu ul {
+    list-style: none;
+}header .Navbar_menu ul li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    transition: all 0.3s;
+    color: var(--text_black);
+}
+header .Navbar_menu ul li a:hover{
+    color: var(--text_hover);
+}
+header .Navbar_right .Navbar_btn button{
+    padding: 12px 32px;
+    border: none;
+    border-radius: 5px;
+    color: var(--text_white);
+    font-size: 12px;
+    background-color: var(--text_black);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+header .Navbar_right .Navbar_btn button:hover{
+    background-color: transparent;
+    color: var(--text_black);
+    outline: 1px solid var(--text_black);
+}
+@media (max-width:768px){
+    .Navbar_right{
+        display: none;
+    }
+}
+@media (max-width:567px){
+    header{
+        padding: 15px 0;
+    }
+    .Navbar_left{
+        display: none;
+    }
+    header .Navbar_menu{
+        margin: auto;
+    }
+    .homepage .hero_section{
+        height: 70vh;
+    }
+    .homepage .hero_section img{
+        width: 80%;
+        height: 50%;
+    }
+    .homepage .hero_section .hero_btn button{
+        padding: 10px 28px;
+        font-size: 10px;
+    }
+}
+@media (max-width:1200px){
+    .homepage .computer_products .com_box{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .homepage .computer_products .com_box .box{
+        width: 32%;
+    }
+    .homepage .computer_products .com_tit p{
+        width: 100%;
+    }
+}
+@media (max-width:1000px){
+    .homepage .computer_products .com_box .box{
+        width: 49%;
+    }
+}
+.homepage .hero_section{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(207, 178, 183);
+    padding: var(--p);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.homepage .hero_section img{
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+.homepage .hero_section .hero_btn button{
+    padding: 12px 32px;
+    background-color: var(--text_black);
+    color: var(--text_white);
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s;
+}
+.homepage .hero_section .hero_btn button:hover{
+    cursor: pointer;
+    background-color: var(--text_hover);
+}
+.homepage .computer_products{
+    width: 100%;
+    padding: var(--p);
+}
+.homepage .computer_products .com_tit{
+    padding-top: 100px;
+}
+.homepage .computer_products .com_tit h3{
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 32px;
+    color: var(--text_black);
+}
+.homepage .computer_products .com_tit p{
+    font-size: 12px;
+    color: var(--text_black);
+    text-align: center;
+    font-family: sans-serif;
+    width: 50%;
+    margin: auto;
+    margin-top: 5px;
+}                   
+.homepage .computer_products .com_box{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+.homepage .computer_products .com_box .box{
+    width: 25%;
+    background-color: transparent;
+    border: 1px solid var(--text_black);
+    border-radius: 4px;
+    padding: 20px;
+}      
+.homepage .computer_products .com_box .box img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    transition: all 0.3;
+    cursor: pointer;
+}   
+.homepage .computer_products .com_box .box img:hover{
+    transform: scale(1.1);
+}                               
+.homepage .computer_products .com_box .box .box_tit h3{
+    font-family: sans-serif;
+    font-size: 16px;
+}                                                       
+.homepage .computer_products .com_box .box .box_tit p{
+    font-family: sans-serif;
+    font-size: 12px;
+    margin-top: 5px;
+}            
+.homepage .computer_products .com_box .box .box_tit .btn_com button{
+    width: 100%;
+    padding: 12px 32px;
+    border: none;
+    margin-top: 10px;
+    background-color: var(--text_black);
+    color: var(--text_white);
+    border-radius: 4px;
+    font-size: 12px;
+    transition: all 0.3;
+    cursor: pointer;
+}   
+.homepage .computer_products .com_box .box .box_tit .btn_com button:hover{
+    background-color: var(--btn-hover);
+}         
+footer{
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}       
+footer i{
+    color: white;
+}          
+ 
